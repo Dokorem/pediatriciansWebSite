@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="navbar(user)">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5 fixed-top shadow" style="height:75px;">
+    <div class="container">
+            <a class="navbar-brand" href="#">Педиатры</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/consultations">Консультации</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/courses">Курсы</a>
+                    </li>
+                </ul>
+
+                <form th:if="${user == null || user.name == null}" class="d-flex" role="search">
+                    <a class="btn btn-primary mx-lg-2 me-md-2 me-sm-2" type="button" href="/login">Войти</a>
+                    <a class="btn btn-primary" type="button" href="/registration">Зарегистрироваться</a>
+                </form>
+                <div th:unless="${user == null || user.name == null}">
+                    <a href="/profile">
+                        <h5 th:text="${user.name}"></h5>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

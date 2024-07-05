@@ -1,0 +1,190 @@
+:root {
+    --lightBlueColor: #92C1EC;
+    --blueColor: #0A4378;
+    --hoverColor: #83acd3;
+}
+
+@font-face {
+    font-family: 'Loew';
+    src: url('../fonts/LoewNext-ExtraBold-BF63fd638a981de.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--lightBlueColor);
+    background-image: url('../media/pediatricians_web_site_background_image.png');
+    font-family: 'Loew', sans-serif;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+input, textarea, button {
+    font-family: 'Loew', sans-serif;
+}
+
+section {
+    margin-top: 100px;
+}
+
+nav {
+    height: 75px;
+}
+
+.mt-100px {
+    margin-top: 100px;
+}
+
+.enterContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+
+.enterButtonsHolder {
+
+    width: 14vw;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.btn-ped {
+    background-color: var(--blueColor);
+    height: 60px;
+    border: 0;
+}
+
+.btn-ped:hover {
+    background-color: var(--hoverColor);
+}
+
+.enterContent input {
+    width: 100%;
+    height: 60px;
+    border: 0;
+    text-align: center;
+}
+
+.enterContent h3 {
+    color: var(--blueColor);
+}
+
+.enterContent h4 {
+    color: white;
+}
+
+.enterContent a {
+    color: var(--blueColor);
+}
+
+.btn-navbar {
+    background-color: var(--blueColor);
+    color: white;
+    border: 0;
+    padding: 5px;
+}
+
+.btn-navbar:hover {
+    background-color: var(--hoverColor);
+}
+
+.consultationsAdminSection h3 {
+    color: var(--blueColor);
+}
+
+.consultationAdminCard h5 {
+    color: var(--blueColor);
+}
+
+
+.col-lg-6, .col-sm-12 {
+    box-sizing: border-box;
+}
+
+.consultationPostSection h3 {
+    color: var(--blueColor);
+}
+
+.ped-input {
+    border: 3px solid rgba(0, 0, 0, .3);
+    padding: 5px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.ped-textarea {
+    border: 3px solid rgba(0, 0, 0, .3);
+    padding: 5px;
+    border-radius: 20px;
+    resize: none;
+    height: 180px;
+}
+
+
+.consultationPostSection label {
+    color: var(--blueColor);
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.courses-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.courses-card h3 {
+    color: var(--blueColor);
+}
+
+.ped-label {
+    color: var(--blueColor);
+}
+
+.custom-file-upload {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.file-label:hover {
+    background-color: #f0f0f0;
+}
+
+#courseImage {
+    display: none;
+}
+
+.file-name {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #999;
+    font-size: 14px;
+}
